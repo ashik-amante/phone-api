@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <h1 class="text-6xl text-center bg-slate-300">Hunting Phones</h1>
+        <h1 class="text-6xl text-center">Hunting Phones</h1>
     </header>
 
     <main class="container mx-auto mt-10">
@@ -23,8 +23,15 @@
 
         </section>
         <section>
+            <div id="loading-spinner" class="my-10 text-center hidden">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
             <div id="phone-container" class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6  p4 mt-8">
               
+            </div>
+            <!-- show all button -->
+            <div id="showall-container" class="hidden text-center mt-8">
+                <button class="btn btn-accent " >Show all</button>
             </div>
         </section>
 

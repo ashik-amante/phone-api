@@ -9,6 +9,21 @@ const loadPhone = async (searchText) =>{
 const displayPhone = phones =>{
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.innerText = ''
+    console.log(phones.length);
+    // if more than 112 phone 
+    const showallContainer = document.getElementById('showall-container');
+    if(phones.length > 12){
+        showallContainer.classList.remove('hidden')
+    }
+    else{
+        showallContainer.classList.add('hidden')
+    }
+    // display only first 10 phone 
+    phones = phones.slice(0,12)
+    
+
+
+
     phones.forEach(phone => {
         const phoneCard = document.createElement('div');
         phoneCard.classList = `card bg-base-100  shadow-xl`
@@ -27,16 +42,26 @@ const displayPhone = phones =>{
                 </div>
         `
         phoneContainer.appendChild(phoneCard)
-
-        console.log(phone);
     })
+    toggleLoading(false)
 }
 
 const handelsearchbtn = () =>{
+    toggleLoading(true)
     const searchField = document.getElementById('search-field')
     const searchText = searchField.value;
     console.log(searchText);
     loadPhone(searchText)
+}
+
+const toggleLoading = (isLoading) =>{
+    const loadingSpinner = document.getElementById('loading-spinner')
+    if(isLoading ){
+        loadingSpinner.classList.remove('hidden')
+    }
+    else{
+        loadingSpinner.classList.add('hidden')
+    }
 }
 
 
