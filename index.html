@@ -12,12 +12,18 @@
 
 <body>
     <header>
-        <h1 class="text-6xl text-center bg-slate-300">All Phones</h1>
+        <h1 class="text-6xl text-center bg-slate-300">Hunting Phones</h1>
     </header>
 
-    <main>
+    <main class="container mx-auto mt-10">
         <section>
-            <div id="phone-container" class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 pl-4 mt-8">
+            <input id="search-field" type="text" placeholder="Search ..." class="input input-bordered w-full max-w-xs bg-gray-200" />
+
+            <button onclick="handelsearchbtn()" class="btn btn-accent">Search</button>
+
+        </section>
+        <section>
+            <div id="phone-container" class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6  p4 mt-8">
               
             </div>
         </section>
