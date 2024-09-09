@@ -17,23 +17,43 @@
 
     <main class="container mx-auto mt-10">
         <section>
-            <input id="search-field" type="text" placeholder="Search ..." class="input input-bordered w-full max-w-xs bg-gray-200" />
+            <input id="search-field" type="text" placeholder="Search ..."
+                class="input input-bordered w-full max-w-xs bg-gray-200" />
 
             <button onclick="handelsearchbtn()" class="btn btn-accent">Search</button>
 
         </section>
+
+        <!-- spinner and phone co=ntaiber  -->
         <section>
             <div id="loading-spinner" class="my-10 text-center hidden">
                 <span class="loading loading-spinner loading-lg"></span>
             </div>
             <div id="phone-container" class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6  p4 mt-8">
-              
+
             </div>
             <!-- show all button -->
             <div id="showall-container" class="hidden text-center mt-8">
-                <button onclick="handleShowall()" class="btn btn-accent " >Show all</button>
+                <button onclick="handleShowall()" class="btn btn-accent ">Show all</button>
             </div>
         </section>
+        <!-- show detail modal  -->
+        <!-- Open the modal using ID.showModal() method -->
+    
+        <dialog id="show_detail_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <h3 id="phone-name" class="text-3xl font-bold">Hello!</h3>
+                <div id="show-detail-container">
+
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn ">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
 
     </main>
 
@@ -41,3 +61,4 @@
 </body>
 
 </html>
+
